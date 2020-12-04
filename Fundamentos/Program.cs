@@ -16,7 +16,7 @@ namespace Fundamentos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form30SerializarColeccion());
+            Application.Run(new Form31Coches());
 
         }
     }

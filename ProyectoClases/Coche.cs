@@ -14,6 +14,12 @@ namespace ProyectoClases
 
         }
 
+        public Coche(String marca, String modelo)
+        {
+            this.Marca = marca;
+            this.Modelo = modelo;
+        }
+
         public Coche(String marca, String modelo, byte[] imagen) 
         {
             this.Marca = marca;

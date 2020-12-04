@@ -39,8 +39,8 @@ namespace Fundamentos
             this.label4 = new System.Windows.Forms.Label();
             this.lstCoches = new System.Windows.Forms.ListBox();
             this.btInsertar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btGuardar = new System.Windows.Forms.Button();
+            this.btLeer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fotoCoche)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,17 +90,19 @@ namespace Fundamentos
             this.fotoCoche.Location = new System.Drawing.Point(40, 182);
             this.fotoCoche.Name = "fotoCoche";
             this.fotoCoche.Size = new System.Drawing.Size(205, 157);
+            this.fotoCoche.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fotoCoche.TabIndex = 5;
             this.fotoCoche.TabStop = false;
             // 
             // btCargarCoche
             // 
-            this.btCargarCoche.Location = new System.Drawing.Point(40, 356);
+            this.btCargarCoche.Location = new System.Drawing.Point(43, 345);
             this.btCargarCoche.Name = "btCargarCoche";
             this.btCargarCoche.Size = new System.Drawing.Size(205, 23);
             this.btCargarCoche.TabIndex = 6;
             this.btCargarCoche.Text = "Cargar Coche";
             this.btCargarCoche.UseVisualStyleBackColor = true;
+            this.btCargarCoche.Click += new System.EventHandler(this.btCargarCoche_Click);
             // 
             // label4
             // 
@@ -118,6 +120,7 @@ namespace Fundamentos
             this.lstCoches.Name = "lstCoches";
             this.lstCoches.Size = new System.Drawing.Size(203, 342);
             this.lstCoches.TabIndex = 8;
+            this.lstCoches.SelectedIndexChanged += new System.EventHandler(this.lstCoches_SelectedIndexChanged);
             // 
             // btInsertar
             // 
@@ -127,32 +130,35 @@ namespace Fundamentos
             this.btInsertar.TabIndex = 9;
             this.btInsertar.Text = "Insertar";
             this.btInsertar.UseVisualStyleBackColor = true;
+            this.btInsertar.Click += new System.EventHandler(this.btInsertar_Click);
             // 
-            // button3
+            // btGuardar
             // 
-            this.button3.Location = new System.Drawing.Point(516, 190);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Guardar datos";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btGuardar.Location = new System.Drawing.Point(516, 190);
+            this.btGuardar.Name = "btGuardar";
+            this.btGuardar.Size = new System.Drawing.Size(96, 23);
+            this.btGuardar.TabIndex = 10;
+            this.btGuardar.Text = "Guardar datos";
+            this.btGuardar.UseVisualStyleBackColor = true;
+            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
-            // button4
+            // btLeer
             // 
-            this.button4.Location = new System.Drawing.Point(516, 243);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 23);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Leer datos";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btLeer.Location = new System.Drawing.Point(516, 243);
+            this.btLeer.Name = "btLeer";
+            this.btLeer.Size = new System.Drawing.Size(96, 23);
+            this.btLeer.TabIndex = 11;
+            this.btLeer.Text = "Leer datos";
+            this.btLeer.UseVisualStyleBackColor = true;
+            this.btLeer.Click += new System.EventHandler(this.btLeer_Click);
             // 
             // Form31Coches
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 415);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btLeer);
+            this.Controls.Add(this.btGuardar);
             this.Controls.Add(this.btInsertar);
             this.Controls.Add(this.lstCoches);
             this.Controls.Add(this.label4);
@@ -183,7 +189,7 @@ namespace Fundamentos
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox lstCoches;
         private System.Windows.Forms.Button btInsertar;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btGuardar;
+        private System.Windows.Forms.Button btLeer;
     }
 }
